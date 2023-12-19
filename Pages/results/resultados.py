@@ -12,7 +12,7 @@ def resultados():
     # Carregando a base de dados
     try:
         df = pd.read_csv(
-            'https://raw.githubusercontent.com/claudiopickersgill/repoteste/main/data/Life-Expectancy-Data-Updated.csv')
+            'https://raw.githubusercontent.com/cirofbb/Life_expectancy/main/data/Life-Expectancy-Data-Updated.csv')
     except Exception as e:
         print(f"Erro ao ler o arquivo CSV: {e}")
 
