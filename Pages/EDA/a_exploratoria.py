@@ -33,7 +33,7 @@ def a_exploratoria():
     st.subheader('Barplot da mortalidade infantil por região')
     fig, ax = plt.subplots()
     sns.barplot(x='Region', y='Infant_deaths', data=df_novo)
-    plt.title('Mortalidade infantil por região')
+    plt.title('Mortalidade infantil por região (mortes por cada mil nascimentos)')
     plt.xticks(rotation=90)
     plt.figure(figsize=(15, 8))
     st.pyplot(fig)
@@ -49,4 +49,16 @@ def a_exploratoria():
         'Média da expectativa de vida por região, divididas por status econômico')
     plt.xticks(rotation=90)
     plt.figure(figsize=(15, 8))
+    st.pyplot(fig)
+    st.subheader('Heatmap com a correlação entre as variáveis')
+    num_col = [
+        'Infant_deaths', 'Under_five_deaths', 'Adult_mortality', 'Alcohol_consumption', 'Hepatitis_B', 'Measles',
+        'BMI', 'Polio', 'Diphtheria', 'Incidents_HIV', 'GDP_per_capita', 'Population_mln', 'Thinness_ten_nineteen_years',
+        'Thinness_five_nine_years', 'Schooling', 'Life_expectancy', 'Economy_status']
+    df_numeric = df_novo[num_col]
+    corr_matrix = df_numeric.corr()
+    plt.figure(figsize=(10, 8))
+    sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
+    plt.title('Mapa de calor da correlação entre as variáveis')
+    fig = plt.gcf()
     st.pyplot(fig)
