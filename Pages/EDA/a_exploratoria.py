@@ -58,7 +58,7 @@ def a_exploratoria():
     df_numeric = df_novo[num_col]
     corr_matrix = df_numeric.corr()
     plt.figure(figsize=(10, 8))
-    sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
+    sns.heatmap(corr_matrix, annot=True, fmt='.2f', cmap='coolwarm', linewidths=.5)
     plt.title('Mapa de calor da correlação entre as variáveis')
     fig = plt.gcf()
     st.pyplot(fig)
