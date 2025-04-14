@@ -57,8 +57,10 @@ Execute o aplicativo:
 
 streamlit run app.py
 
-### Estrutura do Projeto
+```markdown
+Estrutura do Projeto:
 
+`
 .
 ├── app.py                # Aplicativo principal Streamlit
 ├── Pages/
@@ -69,6 +71,7 @@ streamlit run app.py
 │   └── results/
 │       └── resultados.py      # Modelo de regressão
 └── README.md             # Este arquivo
+```
 
 ### Dependências
 - Python 3.7+
