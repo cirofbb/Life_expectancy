@@ -51,15 +51,14 @@ Link para os dados
 Certifique-se de ter Python instalado (versão 3.7 ou superior)
 
 Instale as dependências:
-
-Copy
 pip install streamlit pandas matplotlib seaborn numpy scikit-learn
+
 Execute o aplicativo:
 
-Copy
 streamlit run app.py
-Estrutura do Projeto
-Copy
+
+### Estrutura do Projeto
+
 .
 ├── app.py                # Aplicativo principal Streamlit
 ├── Pages/
